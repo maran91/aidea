@@ -8,11 +8,15 @@ const app = express();
 // Map global promise - get rid of warning
 mongoose.Promise = global.Promise;
 // Connect to mongoose
-mongoose.connect('mongodb://localhost/vidjot-dev', {
+mongoose.connect('mongodb://localhost/aidea-dev', {
  
 })
   .then(() => console.log('MongoDB Connected...'))
   .catch(err => console.log(err));
+
+//Load Idea Model
+require('./models/Idea');
+const Idea = mongoose.model('ideas');
 
 // Handlebars Middleware
 app.engine('handlebars', exphbs({
@@ -31,6 +35,11 @@ app.get('/',(req, res) => {
 // About Route
 app.get('/about', (req,res) =>{
   res.render('about');
+});
+
+//Add Idea Form
+app.get('/ideas/add', (req, res) =>{
+  res.render('ideas/add');
 });
 
 const port = 5000;
