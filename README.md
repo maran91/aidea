@@ -1,7 +1,8 @@
-# aidea
-mängu ja aplikatsiooni ideede kogumik
-Kirjeldus
-aplikatsioonid ideede ja muude ideede salvestamis leht.
+# Aidea
+Aplikatsioonide ideede kogumik.
+
+
+Kirjeldus aplikatsioonid ideede ja muude ideede salvestamis leht.
 
 Saab lisada, muuta kustutada ideesid.
 
